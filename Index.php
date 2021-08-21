@@ -3,9 +3,9 @@
 
 
 
-$x = 1022221;
+$x = 1016322;
 
-while ($x <= 1514950) {
+while ($x <= 1994950) {
 
   if ($x == 1016322) {
     $file = fopen("student1.json", "a+");
@@ -190,7 +190,7 @@ while ($x <= 1514950) {
   fclose($file);
 
 
-  if ($x == 1514950) {
+  if ($x == 1994950) {
     $file = fopen("student1.json", "a+");
     fwrite($file, "]");
     fclose($file);
