@@ -3,12 +3,12 @@
 
 
 
-$x = 1016322;
+$x = 1022221;
 
 while ($x <= 1514950) {
 
   if ($x == 1016322) {
-    $file = fopen("student.json", "a+");
+    $file = fopen("student1.json", "a+");
     fwrite($file, "[");
     fclose($file);
   }
@@ -74,7 +74,7 @@ while ($x <= 1514950) {
   // 0000
   $startScrapeLang2 = explode('<span class="formatt2">اللغة الأجنبية الثانية :</span>', $response);
   $endscrapeLang2 = explode('</span>', $startScrapeLang2[1]);
-  $lang2 = str_replace('<span class="formatt4">', "", $endscrapeE[0]);
+  $lang2 = str_replace('<span class="formatt4">', "", $endscrapeLang2[0]);
 
   // 00000000
   $startScrapeM1 = explode('<span class="formatt2">مجموع الرياضيات البحتة :</span>', $response);
@@ -159,7 +159,7 @@ while ($x <= 1514950) {
 
   // Write To The Json File
 
-  $file = fopen("student.json", "a+");
+  $file = fopen("student1.json", "a+");
   fwrite(
     $file,
     '{"Name":"' . $name . '",
@@ -191,7 +191,7 @@ while ($x <= 1514950) {
 
 
   if ($x == 1514950) {
-    $file = fopen("student.json", "a+");
+    $file = fopen("student1.json", "a+");
     fwrite($file, "]");
     fclose($file);
   }
