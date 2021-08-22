@@ -3,9 +3,9 @@
 
 
 
-$x = 1864982;
-$start = 1864982;
-$end = 1914982;
+$x = 14646887;
+$start = 14646887;
+$end = 14646890;
 $num = 1;
 
 // Connect to database
@@ -166,6 +166,8 @@ if (!$conn) {
 
     if (mysqli_query($conn, $sqlInsert)) {
       echo "Done Insert : " . $x;
+    } else {
+      echo "faild : " . mysqli_error($conn);
     }
 
     // Increase X By 1
